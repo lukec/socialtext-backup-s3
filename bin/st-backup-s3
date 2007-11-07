@@ -3,4 +3,6 @@ use strict;
 use warnings;
 use Socialtext::Backup::S3;
 
+my $now = localtime;
+print "Starting backup at $now\n";
 Socialtext::Backup::S3->new->backup;
