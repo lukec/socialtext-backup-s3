@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use lib 'lib';
+use Socialtext::Restore::S3;
+
+my $filename = shift;
+
+if ($filename) {
+    Socialtext::Restore::S3->new->fetch_file($filename);
+}
+else {
+    Socialtext::Restore::S3->new->restorable_files;
+}
