@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use lib 'lib';
 use Socialtext::Backup::S3;
 
 Socialtext::Backup::S3->new->backup;
