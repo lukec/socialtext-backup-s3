@@ -6,6 +6,8 @@ use Sys::Hostname qw/hostname/;
 use Socialtext::System qw/shell_run/;
 use base 'Socialtext::S3';
 
+our $VERSION = '0.01';
+
 sub new {
     my $class = shift;
     my $self = {
