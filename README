@@ -1,0 +1,17 @@
+How to use this:
+
+Put the following in the www-data user's crontab:
+
+  12 17 * * * PATH=$PATH:/usr/local/bin /usr/local/bin/st-backup-s3 >> /var/log/st-backup-s3.log
+
+And then make sure that `/var/log/st-backup-s3.log` exists and is writable by the www-data user.
+
+Configuration:
+
+Create a `/etc/socialtext/backup-s3.yaml` file with this format:
+
+    # Put your amazon details here
+    aws_access_key_id: 0O0O0O00O0O0O0O0O0O0
+    aws_secret_access_key: 0O0O0O0O0O0O0O0O0O0O0O0O0O0O0O0O0O0O0O0O
+
+And then it should work.  You can check what it's doing by reading the code and the log file.
